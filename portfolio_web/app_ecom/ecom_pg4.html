@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <title>cnewbydesign - Ecommerce Mockup</title>
+
+  
+  <link href="css/styles_pg4.css" rel="stylesheet">
+  
+</head>
+
+<body>
+
+
+
+
+
+  <div id="main-navigation-menu" class="main-navigation-menu-content">
+    <div class="main-nav-sections">
+     <ul>
+      <li><a href="ecom_pg3.html" style=" text-decoration: none;  color: rgba(183, 200, 235, 1);
+        "> My Account </a></li>
+        <br />
+        <br />
+        <li><a href="ecom_pg2.html"  style=" text-decoration: none; color: rgba(183, 200, 235, 1);"> :: LOGOUT :: </a></li>
+      </ul>
+    </div>
+
+  </div>
+
+
+
+
+  <!--  MODAL POP-UP CONSTRUCTION WOMENS  -->
+  <div id="construction-womens-popup-id" class="construction-womens-popup">
+    <div class="construction-womens-popup-info">
+      <p>  ** WOMEN'S **  <br /> UNDER CONSTRUCTION </p>
+
+      <div id="construction-womens-popup-exit-id" class="construction-womens-popup-exit">
+        <div class="exit-x">
+          <div class="exit-x1">
+          </div>
+          <div class="exit-x2">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--  MODAL POP-UP CONSTRUCTION CHILDRENS  -->
+  <div id="construction-childrens-popup-id" class="construction-childrens-popup">
+    <div class="construction-childrens-popup-info">
+      <p> ** CHILDREN'S ** <br /> UNDER CONSTRUCTION </p>
+
+      <div id="construction-childrens-popup-exit-id" class="construction-childrens-popup-exit">
+       <div class="exit-x">
+        <div class="exit-x1">
+        </div>
+        <div class="exit-x2">
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <!-- Example row of columns -->
+
+  <div class="header-pg4">
+    <div id="top-left-back-but" class="product-back-button">
+     
+    </div>
+
+    <div id="top-right-menu-but" class="nav-button-right">   
+    </div>
+  </div>
+
+  <div class="content-pg4"> 
+
+   <div id="mens-sect-pg4-id" class="mens-sect-pg4">MEN'S</div>
+   <div id="womens-sect-pg4-id" class="womens-sect-pg4">WOMEN'S</div>
+   <div id="childrens-sect-pg4-id" class="childrens-sect-pg4">CHILDREN'S</div>
+
+   
+ </div>
+ 
+
+
+ 
+ 
+</div> 
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+
+
+
+  $(document).ready(function(){
+
+
+   $("#top-left-back-but").click(function(){
+     window.location.assign("ecom_pg3.html");
+   });
+
+   $("#top-right-menu-but").click(function(){
+    $(".main-navigation-menu-content").addClass("main-navigation-menu-open");
+  });
+
+   
+   $("#main-navigation-menu").click(function(){
+     $(".main-navigation-menu-content").removeClass("main-navigation-menu-open");
+   });
+
+
+   /* Mens Section Button */
+   $("#mens-sect-pg4-id").click(function(){
+    window.location = "ecom_pg5.html";
+  });
+
+
+
+
+   /*  Modal Pop-up Construction Womens  */
+   $("#womens-sect-pg4-id").click(function(){
+     $(".construction-womens-popup").addClass("construction-womens-popup-overlay");
+   });
+
+
+   $("#construction-womens-popup-exit-id").click(function(){
+     $(".construction-womens-popup").removeClass("construction-womens-popup-overlay");
+   });
+
+
+
+
+   /*  Modal Pop-up Construction Childrenss  */
+   $("#childrens-sect-pg4-id").click(function(){
+     $(".construction-childrens-popup").addClass("construction-childrens-popup-overlay");
+   });
+
+
+   $("#construction-childrens-popup-exit-id").click(function(){
+     $(".construction-childrens-popup").removeClass("construction-childrens-popup-overlay");
+   });
+
+
+
+ });
+
+
+
+</script>
+
+
+</body>
+</html>

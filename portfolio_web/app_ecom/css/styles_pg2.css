@@ -1,0 +1,164 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+body {
+	font-family: "Goudy Bookletter 1911", sans-serif;
+}
+
+
+.container {
+	
+}
+
+.header-pg2 {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(218, 226, 244, 1);
+	z-index: 5;
+}
+
+.footer-pg2 {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 90px;
+	background-color: rgba(218, 226, 244, 1);
+	z-index: 3;
+}	
+
+
+
+
+/*  NAVIGATION MENUS  */
+
+.nav-button-left {
+	position: absolute;
+	top: 20px;
+	left: 5px;
+	width: 50px;	
+	height: 10px;
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+
+.nav-button-right {
+	position: absolute;
+	top: 20px;
+	right: 5px;
+	width: 50px;	
+	height: 10px;
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+
+
+.main-navigation-menu-content{
+	position: absolute;
+	visibility: hidden;
+	width: 0px;
+	height: 100%;
+	left: 0px;
+	background-color: rgba(0,0, 255, 0.7);
+	z-index: 50;
+	
+	transition: all .1s ease-in-out;
+}
+
+.main-navigation-menu-open{
+	position: absolute;
+	visibility: visible;
+	width: 90%;
+	height: 100%;
+	left: 0px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 0px 50px 50px 0px;
+	box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, .5);
+	z-index: 50;
+}
+
+.main-nav-sections {
+	position: absolute;
+	top: 150px;
+	left: 60px;
+	font-size: 30px;
+	color: rgba(183, 200, 235, 1);
+	width: 100px;
+	height: 200px;
+	margin: auto;
+	
+}
+
+.main-nav-sections ul{
+	list-style-type: none;
+}
+
+
+/****  Main Page Content ***/
+
+
+.content-pg2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.myaccount-pg2 {
+	position: absolute;
+	top: 150px;
+	left: 25px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.my-account-title-pg2 {
+	position: absolute;  
+	width: auto;
+	font-size: 30px;  
+	text-align: center;
+	line-height: 10px;
+	margin: auto;
+	left: 50px;
+	z-index: 10;
+}
+
+.search-bar-pg2 {
+	position: absolute;
+	top: 90px;
+	margin-top: 30px;
+	width: 100%;
+	font-size: 20px;
+	text-align: center;
+	color: #cccccc;
+	/* background-color: #aaaa33; */	
+	z-index: 5;
+}
+
+
+.search-bar-pg2 input[type=input] {
+	position: absolute;
+	top: 20px;
+	width: 90px;
+	margin: auto;
+}
+
+.search-bar-pg2 input[type=submit] {
+	position: absolute;
+	left: -50px;
+	width: 100px;
+	height:100px;
+	color: #000000;
+	border-radius: 50px;
+	margin-top: 0px;
+	margin-left: 50%;
+	background-color: 	rgba(255, 255, 255, 1);
+	border: 10px solid  rgba(218, 226, 244, 1);
+	box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+

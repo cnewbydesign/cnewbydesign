@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title</title>
+            <style type="text/css">
+                body {
+                    font-family: Verdana, Geneva, sans-serif;
+                    background-color: #45c5eb;
+                }
+                .container {
+                    position:relative;
+                    width:100%;
+                }
+                .circle_wrap {
+                    /* Wrapper for entire circle   */
+                    text-align: center;
+                    margin: 75px auto;
+                    padding: 2em 0 3em;
+                }
+                .circle {
+                    display: inline-block;
+                    cursor: pointer;
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 50%;
+                    /* Use 50% to create a perfectly round circle */
+                    text-align: center;
+                    position: relative;
+                }
+                /* CSS Effects */
+                /* Border and Center fade effects */
+                .circle_effect .circle {
+                    box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);
+                    -webkit-box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);
+                    overflow: hidden;
+                    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+                    /* Chrome */
+                    -webkit-transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+                    /* Mozilla */
+                    -moz-transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+                    /* Opera */
+                    -o-transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+                    /* IE */
+                    -ms-transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+                }
+                .circle_effect .circle:hover {
+                    background: rgba(255, 255, 255, 1);
+                    -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
+                    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
+                }
+            </style>
+    </head>
+    
+    <body>
+        <div>
+            <div class="circle_wrap circle_effect">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </body>
+
+</html>

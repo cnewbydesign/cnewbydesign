@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <title>cnewbydesign - Recipe App Mockup</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles_pg7.css" rel="stylesheet">
+  
+ 
+
+</head>
+
+<body>
+
+ 
+  <!-- MAIN NAVIGATION MENU SLIDE OUT -->
+  <div id="main-navigation-menu" class="main-navigation-menu-content">
+    <div class="main-nav-sections">
+     <ul>
+      <li><a href="recipe.html" style=" text-decoration: none; color: rgba(183, 200, 235, 1);"> Home </a></li>
+      <li><a href="recipe_pg2.html" style=" text-decoration: none; color: rgba(183, 200, 235, 1);"> Recipes </a></li>
+      <li><a href="recipe_pg10.html" style=" text-decoration: none; color: rgba(183, 200, 235, 1);"> Stores </a></li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+<div class="container">
+  <!-- recipe row of columns -->
+
+  <div class="header-pg7">
+    <div id="top-left-menu-but" class="nav-button-left">
+    </div>
+
+    <div id="top-right-menu-but" class="nav-button-right">   
+    </div>
+  </div>
+
+  <div class="recipe-title-pg7">
+    :: Title ::
+  </div>
+
+
+  <div class="content-pg7"> 
+
+    <a href="javascript:history.go(-1)">
+      <div class="back-but-pg7">
+        Back
+      </div>
+    </a>
+
+
+    <div class="items-buy-pg7">
+      <div class="items-buy-title-pg7">
+        Buy Ingredient?
+      </div>
+      <div id="items-buy-list-pg7-id" class="items-buy-list-pg7">
+        <ul>
+          <li> Yes </li>
+          <li> No </li>
+          
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+</div> 
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+
+
+  $(document).ready(function(){
+
+
+    $("#top-right-menu-but").click(function(){
+      $(".main-navigation-menu-content").addClass("main-navigation-menu-open");
+    });
+
+    
+    $("#main-navigation-menu").click(function(){
+     $(".main-navigation-menu-content").removeClass("main-navigation-menu-open");
+   });
+
+
+    $("#items-buy-list-pg7-id ul li:nth-child(1)").click(function(){
+      window.location.assign("recipe_pg8_1.html");
+    });
+
+
+    $("#items-buy-list-pg7-id ul li:nth-child(2)").click(function(){
+      window.location.assign("recipe_pg5.html");
+    });
+
+
+  });
+
+</script>
+
+
+</body>
+</html>

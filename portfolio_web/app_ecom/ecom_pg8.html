@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <title>cnewbydesign - Ecommerce Mockup</title>
+
+  
+  <link href="css/styles_pg8.css" rel="stylesheet">
+  
+
+</head>
+
+<body>
+  
+ <div id="main-navigation-menu" class="main-navigation-menu-content">
+  <div class="main-nav-sections">
+   <ul>
+    <li><a href="ecom_pg3.html" style=" text-decoration: none;  color: rgba(183, 200, 235, 1);
+      "> My Account </a></li>
+      <br />
+      <br />
+      <li><a href="ecom_pg2.html"  style=" text-decoration: none; color: rgba(183, 200, 235, 1);"> :: LOGOUT :: </a></li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+<!--  MODAL POP-UP  -->
+<div id="checkout-popup-id" class="checkout-popup">
+  <div class="checkout-popup-overlay">
+    <div class="checkout-popup-info">
+      <div class="checkout-but-wrapper">
+        <div class="checkout-thankyou">
+          THANK YOU
+        </div>
+
+        <div  id="checkout-button1-id" class="checkout-button1">
+          Continue Shopping
+        </div>
+      </div>
+
+
+      <div id="checkout-popup-exit-id" class="checkout-popup-exit">
+      </div>
+
+    </div>
+    
+  </div>     
+</div>
+
+
+
+<div class="container">
+  <!-- Example row of columns -->
+
+  <div class="header-pg8">
+    
+
+    <div id="top-right-menu-but" class="nav-button-right">   
+    </div>
+  </div>
+
+
+
+  
+
+
+  <div class="content-pg8"> 
+
+
+   
+    <div class="order-sum-wrapper">
+      <div class="order-sum-row1-pg8">
+        <div>
+          SHOE IMG
+        </div>
+        <div>
+          NAME
+        </div>
+        <div>
+          $20.00
+        </div>
+      </div>
+
+      <div class="order-sum-row1-pg8">
+        <div>
+          SHOE IMG
+        </div>
+        <div>
+          NAME
+        </div>
+        <div>
+          $20.00
+        </div>
+      </div>
+
+      <div class="order-sum-row3-pg8">
+        <div>
+          Credit Card
+        </div>
+        <div>
+          VISA
+        </div>
+        <div>
+          x1234
+        </div>
+      </div>
+
+      <div class="order-sum-row4-pg8">
+        <div>
+          SHIPPING        
+        </div>
+        <div>
+          GROUND
+        </div>
+        <div>
+          $0
+        </div>
+      </div>
+
+      <div class="order-sum-row4-pg8">
+        <div>
+          .............
+        </div>
+        <div>
+          CHECKOIUT
+        </div>
+        <div>
+          .............
+        </div>
+      </div>    
+    </div>
+
+    <div class="footer-pg8">
+      <div id="button-checkout-pg8" class="add-to-cart-but-pg8"> 
+       Checkout 
+     </div>
+     <div class="price-but-pg8"> 
+      $40.00 
+    </div>
+  </div>
+  
+</div>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+
+
+  $(document).ready(function(){
+
+
+    $("#top-right-menu-but").click(function(){
+      $(".main-navigation-menu-content").addClass("main-navigation-menu-open");
+    });
+
+    
+    $("#main-navigation-menu").click(function(){
+     $(".main-navigation-menu-content").removeClass("main-navigation-menu-open");
+   });
+
+
+    /*  Modal Pop-up Store information  */
+    $("#button-checkout-pg8").click(function(){
+     $(".checkout-popup").addClass("checkout-popup-overlay");
+   });
+
+
+    $("#checkout-popup-exit-id").click(function(){
+     $(".checkout-popup").removeClass("checkout-popup-overlay");
+   });
+
+
+
+    /*  BUTTONS --  CONTINUE SHOPPING  */
+    $("#checkout-button1-id").click(function(){
+     $(".checkout-popup").removeClass("checkout-popup-overlay");
+
+     window.location = "ecom_pg3.html";
+
+   });
+
+
+
+
+  });
+
+</script>
+
+
+</body>
+</html>

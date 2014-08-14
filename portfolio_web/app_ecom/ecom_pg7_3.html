@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <title>cnewbydesign - Ecommerce Mockup</title>
+
+  
+  <link href="css/styles_pg7_3.css" rel="stylesheet">
+  
+  <style>
+
+
+
+  </style>
+
+
+</head>
+
+<body>
+
+ <div id="main-navigation-menu" class="main-navigation-menu-content">
+  <div class="main-nav-sections">
+   <ul>
+    <li><a href="ecom_pg3.html" style=" text-decoration: none;  color: rgba(183, 200, 235, 1);
+      "> My Account </a></li>
+      <br />
+      <br />
+      <li><a href="ecom_pg2.html"  style=" text-decoration: none; color: rgba(183, 200, 235, 1);"> :: LOGOUT :: </a></li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+<!--  MODAL POP-UP  -->
+<div id="addtocart-popup-id" class="addtocart-popup">
+  <div class="addtocart-popup-overlay">
+    <div class="addtocart-popup-info">
+
+      <div class="addtocart-but-wrapper">
+        <div  id="addtocart-button1-id" class="addtocart-button1">
+          Continue Shopping
+        </div>
+        <div  id="addtocart-button2-id" class="addtocart-button2">
+          Checkout
+        </div>
+      </div>
+
+      <div id="addtocart-popup-exit-id" class="addtocart-popup-exit">
+        
+        <div class="exit-x">
+          <div class="exit-x1">
+          </div>
+          <div class="exit-x2">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>     
+</div>
+
+
+
+
+
+<div class="container">
+  <!-- Example row of columns -->
+
+  <div class="header-pg7-3">
+    <div id="top-left-back-but" class="product-back-button">
+      
+    </div>
+
+    <div id="top-right-menu-but" class="nav-button-right">   
+    </div>
+  </div>
+
+
+  
+
+
+  <div class="content-pg7-3"> 
+
+
+   <div class="section-item-title">
+    <span> Item #3 </span>
+  </div>
+
+  <div class="product-view-full-pg7-3">
+
+  </div>
+
+</div>
+
+</div>
+
+<div class="product-view-wrapper-pg7-3">
+  <div id="button1" class="product-view-1-pg7-3"> <p>View #1</p> </div>
+  <div id="button2" class="product-view-2-pg7-3"> <p>View #2</p></div>
+</div>
+
+<div class="footer-pg7-3">
+  <div id="button-addtocart-pg7-3" class="add-to-cart-but-pg7-3"> 
+    <span> Add To Cart <span>
+    </div>
+    <div class="price-but-pg7-3"> $20.00 </div>
+  </div>
+  
+</div> 
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+
+
+
+  $(document).ready(function(){
+
+    $("#button1").click(function(){
+      $(".product-view-full-pg7-3").css("box-shadow","0px 0px 0px 20px #331133 inset");
+
+      $("#button1").css("box-shadow","0px 0px 0px 3px #331133 inset");
+      $("#button2").css("box-shadow","none");
+    });
+
+
+    $("#button2").click(function(){
+
+      $(".product-view-full-pg7-3").css("box-shadow","0px 0px 0px 20px #1133ff inset");
+
+      $("#button2").css("box-shadow","0px 0px 0px 3px #1133ff inset");
+      $("#button1").css("box-shadow","none");
+    });
+
+    $("#top-left-back-but").click(function(){
+      javascript:history.go(-1); 
+    });
+
+    $("#top-right-menu-but").click(function(){
+      $(".main-navigation-menu-content").addClass("main-navigation-menu-open");
+    });
+
+    
+    $("#main-navigation-menu").click(function(){
+     $(".main-navigation-menu-content").removeClass("main-navigation-menu-open");
+   });
+
+
+
+    /*  Modal Pop-up Store information  */
+    $("#button-addtocart-pg7-3").click(function(){
+     $(".addtocart-popup").addClass("addtocart-popup-overlay");
+   });
+
+
+    $("#addtocart-popup-exit-id").click(function(){
+     $(".addtocart-popup").removeClass("addtocart-popup-overlay");
+   });
+
+
+    /*  BUTTONS --  CONTINUE SHOPPING  */
+    $("#addtocart-button1-id").click(function(){
+     $(".addtocart-popup").removeClass("addtocart-popup-overlay");
+   });
+
+
+
+
+    /*  BUTTONS --  CHECKOUT   */
+    $("#addtocart-button2-id").click(function(){
+     window.location = "ecom_pg8.html";
+   });
+
+  });
+
+
+
+</script>
+
+
+</body>
+</html>
