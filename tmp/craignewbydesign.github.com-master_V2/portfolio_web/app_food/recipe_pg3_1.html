@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <title>cnewbydesign - Recipe App Mockup</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles_pg3.css" rel="stylesheet">
+  
+
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  
+  
+  <script src="http://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
+  <script>
+    // Wait for window to load
+    $(window).load(function() {
+      // Animate loader off screen
+      $("#loader").animate({
+        top: -200
+      }, 1500);
+    });
+  </script> 
+
+
+</head>
+
+<body>
+
+
+  <!--  MODAL POP-UP  -->
+  <div id="#loader">  HI  </div>
+
+  <!-- MAIN NAVIGATION MENU -->
+  <div id="main-navigation-menu" class="main-navigation-menu-content">
+    <div class="main-nav-sections">
+      <ul>
+        <li><a href="recipe.html" style=" text-decoration: none; color: rgba(183, 200, 235, 1);"> Home </a></li>
+        <li><a href="recipe_pg2.html" style=" text-decoration: none; color: rgba(183, 200, 235, 1);"> Recipes </a></li>
+        <li><a href="recipe_pg10.html" style=" text-decoration: none; color: rgba(183, 200, 235, 1);"> Stores </a></li>
+      </ul>
+    </div>
+
+  </div>
+
+
+
+  <!--  MODAL POP-UP  -->
+  
+  <div id="recipe-popup-id" class="recipe-popup">
+    <div class="recipe-popup-info">
+      <div class="item-popup-info-content">
+        <span> Info</span>
+
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
+      </div>
+
+
+
+      <div id="recipe-popup-exit-id" class="recipe-popup-exit">
+        <div class="exit-x">
+          <div class="exit-x1">
+          </div>
+          <div class="exit-x2">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="container">
+    <!-- recipe row of columns -->
+
+    <div class="header-pg3">
+      <div id="top-left-menu-but" class="nav-button-left">
+      </div>
+
+      <div  id="top-right-menu-but" class="nav-button-right">
+      </div>
+    </div>
+
+    <div class="background-wallpaper-pg3"> 
+     <a href="javascript:history.go(-1)">
+      <div class="back-but-pg3">
+        Back
+      </div>
+    </a>
+    
+    <div class="recipe-item-pg3" style="background-color: rgba(115,176,214, 1)">
+    </div>
+
+    <div id="button-info-pg3" class="recipe-info-label-pg3">
+      <p> Info  </p>
+
+    </div>
+  </div>
+
+  <div class="footer-pg3">
+    <a href="recipe_pg4.html">
+      <div id="button-recipe-pg3" class="recipe-tab-pg3">
+       RECIPE 
+     </div>
+   </a>
+
+ </div>
+ 
+ 
+ 
+</div> 
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+
+
+  /*  MAIN NAVIGATION MENU Event Handler */
+
+  $(document).ready(function(){
+
+
+    $("#top-right-menu-but").click(function(){
+      $(".main-navigation-menu-content").addClass("main-navigation-menu-open");
+    });
+
+    
+    $("#main-navigation-menu").click(function(){
+     $(".main-navigation-menu-content").removeClass("main-navigation-menu-open");
+   });
+
+
+    /*  Modal Pop-up Store information  */
+    $("#button-info-pg3").click(function(){
+     $(".recipe-popup").addClass("recipe-popup-overlay");
+   });
+
+
+    $("#recipe-popup-exit-id").click(function(){
+     $(".recipe-popup").removeClass("recipe-popup-overlay");
+   });
+
+
+    $("#button-recipe-pg3").animate({
+      opacity: 0,
+      left: "+=50",
+    }, 5000, function() {
+    // Animation complete.
+  });
+
+  });
+
+
+
+</script>
+
+
+</body>
+</html>

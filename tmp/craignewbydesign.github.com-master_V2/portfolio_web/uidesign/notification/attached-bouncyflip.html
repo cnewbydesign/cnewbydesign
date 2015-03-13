@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title></title>
+		<link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/ns-default.css" />
+		<link rel="stylesheet" type="text/css" href="css/ns-style-attached.css" />
+		<script src="js/modernizr.custom.js"></script>
+		
+	</head>
+	<body class="color-9">
+		<div class="container">
+			
+			<div class="main clearfix">
+				<div class="column">
+					<p class="small"></p>
+					<button id="notification-trigger" class="progress-button">
+						<span class="content"> _____ </span>
+						<span class="progress"></span>
+					</button>
+				</div>
+			</div>
+			
+		</div>
+		<script src="js/classie.js"></script>
+		<script src="js/notificationFx.js"></script>
+		<script>
+			(function() {
+				var bttn = document.getElementById( 'notification-trigger' );
+
+				bttn.disabled = false;
+
+				bttn.addEventListener( 'click', function() {
+					classie.add( bttn, 'active' );
+					setTimeout( function() {
+
+						classie.remove( bttn, 'active' );
+						
+						var notification = new NotificationFx({
+							message : '<span class="icon icon-calendar"></span><p>Thank You for Clicking the Button with Rounded Corners!</p>',
+							layout : 'attached',
+							effect : 'bouncyflip',
+							type : 'notice', 
+							onClose : function() {
+								bttn.disabled = false;
+							}
+						});
+
+						notification.show();
+
+					}, 1200 );
+					
+					this.disabled = true;
+				} );
+			})();
+		</script>
+	</body>
+</html>
