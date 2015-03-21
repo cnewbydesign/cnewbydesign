@@ -1,0 +1,176 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+body {
+	font-family: "Goudy Bookletter 1911", sans-serif;
+}
+
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #ffcc00;
+}
+
+
+/* Load Page Overlay placeholder with Opacity = 0; */
+.load-page-overlay-empty {
+	position: absolute;
+	width: 0px; 
+	height: 0px;  
+	left: 0px;
+    z-index: 20;
+}
+
+/* Fill page with an overlay of color or an image */
+.load-page-overlay-fill {
+	position: absolute;
+	width: 500px; 
+	height: 500px;  
+	left: 0px;
+	background-color: #fffaaa; 
+    z-index: 20;
+
+}
+
+
+/* Show Page Overlay Animation*/
+/* fill page with an overlay to transition to next page loaded*/
+.load-page-overlay-show {
+	position: absolute;
+	width: 0px; 
+	height: 0px;  
+	left: 0px;
+	background-color: #fffaaa; 
+    z-index: 20;
+    animation: loadpageoverlayshow .2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+	-webkit-animation: loadpageoverlayshow .2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 0s;
+}
+
+@-webkit-keyframes loadpageoverlayshow {
+    0% {width: 0px; height: 0px; }
+	100% {width: 500px;	height: 500px; }
+}
+
+@keyframes loadpageoverlayshow {
+    0% {width: 0px; height: 0px; }
+	100% {width: 500px;	height: 500px; }
+}
+
+/* Hide Page Overlay Animation*/
+/* Remove overlay from page once it has loaded */
+.load-page-overlay-hide {
+	position: absolute;
+	width: 500px; 
+	height: 500px;  
+	left: 0px;
+	background-color: #fffaaa; 
+    z-index: 20;
+    animation: loadpageoverlayhide 3s;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
+	-webkit-animation: loadpageoverlayhide 3s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: .2s;
+}
+
+@-webkit-keyframes loadpageoverlayhide {
+    0% {width: 500px; height: 500px; }
+	100% {width: 0px;	height: 0px; }
+}
+
+
+@keyframes loadpageoverlayhide {
+    0% {width: 500px; height: 500px; }
+	100% {width: 0px;	height: 0px; }
+}
+
+
+
+
+
+/* Hide/Show */
+/* loading page animation */
+
+.load-page-loader-hide {
+	position: absolute;
+}
+
+.load-page-loader-show {
+	position: absolute;
+	width: 20px; 
+	height: 20px;  
+	left: 100px;
+	top: 200px;
+	height: 100px;
+	opacity: 0;
+	background-color: #000aac; 
+    animation: loadpageloader 1s;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
+	-webkit-animation: loadpageloader 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: .2s;
+}
+
+@-webkit-keyframes loadpageloader {
+    0% {opacity: 0;}
+	100% {opacity: 1; }
+}
+
+
+@keyframes loadpageloader {
+    0% {opacity: 0;}
+	100% {opacity: 1; }
+}
+
+
+
+
+.header-pg1 {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 90px;
+	border-top: 5px dotted #ffffff;
+	border-bottom: 5px dotted #ffffff;
+	background-color: rgba(218, 226, 244, 1);
+	z-index: 5;
+}
+
+.footer-pg1 {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 90px;
+	border-top: 5px dotted #ffffff;
+	border-bottom: 5px dotted #ffffff;
+	background-color: rgba(218, 226, 244, 1);
+	z-index: 5;
+}	
+
+
+.content-pg1 {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: -30px;
+	left: -110px;
+	margin-left: 50%;
+	margin-top: 50%;
+	background-color: rgba(218, 226, 244, 1);
+	border: 10px solid rgba(183, 200, 235, 1);
+	border-radius: 50%;
+}
+

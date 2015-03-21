@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <style type="text/css">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            *::after, *::before {
+                box-sizing : border-box;
+            }
+            .borderMenuLeft {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                height: 300px;
+                border-width: 0px 0px 0px 10px;
+                border-style: solid;
+                border-radius: 0px 10px 10px 0px;
+                background-color: #cccccc;
+                border-color: rgba(255, 255, 4, 1);
+                transition: all .3s ease-in-out;
+            }
+            .borderMenuLeft:hover {
+                border-width: 0px 0px 0px 100px;
+                border-style:;
+                border-color: rgba(255, 255, 4, 1);
+                background-color: #aaaaaa;
+            }
+            .borderMenuLeftProfile {
+                position: absolute;
+                top: 15px;
+                left: -90px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: 10px solid rgba(51, 170, 193, 1);
+                background-color: rgba(255, 255, 255, 1);
+            }
+            .borderMenuLeftText ul {
+                position: absolute;
+                top: 75px;
+                left: 5px;
+            }
+            .borderMenuLeftText ul li {
+                width: 50px;
+                height: 20px;
+                margin-top: 20px;
+                background-color: rgba(250, 177, 36, 1);
+                border-radius: 50px;
+                list-style: none;
+                transition: all 0.2s ease-in-out;
+                -webkit-transition: all 0.2s ease-in-out;
+            }
+            .borderMenuLeftText ul li:hover {
+                background-color: rgba(255, 255, 25, 1);
+                box-shadow: 0px 0px 0px 3px #3300ff inset;
+            }
+            .borderMenuLeftText ul li:active {
+                background-color: rgba(100, 177, 250, 1);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="borderMenuLeft">
+            <div class="borderMenuLeftProfile">
+                <div class="borderMenuLeftText">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

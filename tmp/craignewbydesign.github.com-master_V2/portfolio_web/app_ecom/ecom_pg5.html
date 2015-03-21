@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <title>cnewbydesign - Ecommerce Mockup</title>
+
+  
+  <link href="css/styles_pg5.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+ <div id="main-navigation-menu" class="main-navigation-menu-content">
+  <div class="main-nav-sections">
+   <ul>
+    <li><a href="ecom_pg3.html" style=" text-decoration: none;  color: rgba(183, 200, 235, 1);
+      "> My Account </a></li>
+      <br />
+      <br />
+      <li><a href="ecom_pg2.html"  style=" text-decoration: none; color: rgba(183, 200, 235, 1);"> :: LOGOUT :: </a></li>
+    </ul>
+  </div>
+
+</div>
+
+
+<div class="container">
+  <!-- Example row of columns -->
+
+  <div class="header-pg5">
+   <div id="top-left-back-but" class="product-back-button">
+     
+   </div>
+
+   <div id="top-right-menu-but" class="nav-button-right">   
+   </div>
+ </div>
+
+
+
+ <div class="content-pg5"> 
+
+   <div class="section-cat-pg5">
+    <ul>
+      <li>
+        <span> Product #1</span>
+      </li>
+
+      <li>
+       <span> Product #2</span>
+     </li>
+
+     <li>
+       <span> Product #3</span>
+     </li>
+
+     <li>
+       <span> Product #4</span>
+     </li>
+
+     <li>
+      <span> Product #5</span>
+    </li>
+  </ul>
+
+</div>
+</div>
+
+
+
+
+
+</div> 
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-1.9.1.js"></script>
+
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+
+
+  $(document).ready(function(){
+
+    $("#top-left-back-but").click(function(){
+     window.location.assign("ecom_pg4.html");
+   });
+
+    $("#top-right-menu-but").click(function(){
+      $(".main-navigation-menu-content").addClass("main-navigation-menu-open");
+    });
+
+    
+    $("#main-navigation-menu").click(function(){
+     $(".main-navigation-menu-content").removeClass("main-navigation-menu-open");
+   });
+
+
+    /* PRODUCT LINKS */
+
+    $(".section-cat-pg5 > ul > li:nth-child(1)").click(function(){
+      window.location = "ecom_pg6_1.html";
+
+    });
+
+    $(".section-cat-pg5 > ul > li:nth-child(2)").click(function(){
+      window.location = "ecom_pg6_2.html";
+
+    });
+
+    $(".section-cat-pg5 > ul > li:nth-child(3)").click(function(){
+      window.location = "ecom_pg6_3.html";
+
+    });
+
+    $(".section-cat-pg5 > ul > li:nth-child(4)").click(function(){
+      window.location = "ecom_pg6_4.html";
+
+    });
+
+
+    $(".section-cat-pg5 > ul > li:nth-child(5)").click(function(){
+      window.location = "ecom_pg6_5.html";
+
+    });
+
+
+  });
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <title>cnewbydesign - Ecommerce Mockup</title>
+
+  <link href="css/styles_pg8.css" rel="stylesheet">
+  <link href="css/page_loader.css" rel="stylesheet">
+  
+
+</head>
+
+<body>
+  
+ <div id="main-navigation-menu" class="main-navigation-menu-content">
+  <div class="main-nav-sections">
+   <ul>
+    <li><a href="ecom_pg3.html" style=" text-decoration: none;  color: rgba(183, 200, 235, 1);
+      "> My Account </a></li>
+      <br />
+      <br />
+      <li><a href="ecom_pg2.html"  style=" text-decoration: none; color: rgba(183, 200, 235, 1);"> :: LOGOUT :: </a></li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+<!--  MODAL POP-UP  -->
+<div id="checkout-popup-id" class="checkout-popup">
+  <div class="checkout-popup-overlay">
+    <div class="checkout-popup-info">
+      <div class="checkout-but-wrapper">
+        <div class="checkout-thankyou">
+          THANK YOU
+        </div>
+
+        <div  id="checkout-button1-id" class="checkout-button1">
+          Continue Shopping
+        </div>
+      </div>
+
+
+    
+    </div>
+    
+  </div>     
+</div>
+
+
+
+<div class="container">
+  <!-- Example row of columns -->
+
+
+
+    <!-- page overlay and loader  -->
+
+    <div class="load-page-overlay-fill"> 
+      <div class="load-page-loader-hide" >
+  
+          <div id="loading-icon" class="double" style="margin-left: 100px; margin-top: 150px;">
+            <span class="loader loader3">
+              <span class="left"><span class="anim"></span></span>
+              <span class="right"><span class="anim"></span></span>
+            </span>
+          </div>
+
+      </div>
+    </div>
+
+
+
+
+  <div class="header-pg8">
+    
+
+    <div id="top-right-menu-but" class="nav-button-right">   
+    </div>
+  </div>
+
+
+  <div class="content-pg8"> 
+
+
+   
+    <div class="order-sum-wrapper">
+      <div class="order-sum-row1-pg8">
+        <div>
+          SHOE IMG
+        </div>
+        <div>
+          NAME
+        </div>
+        <div>
+          $20.00
+        </div>
+      </div>
+
+      <div class="order-sum-row1-pg8">
+        <div>
+          SHOE IMG
+        </div>
+        <div>
+          NAME
+        </div>
+        <div>
+          $20.00
+        </div>
+      </div>
+
+      <div class="order-sum-row3-pg8">
+        <div>
+          Credit Card
+        </div>
+        <div>
+          VISA
+        </div>
+        <div>
+          x1234
+        </div>
+      </div>
+
+      <div class="order-sum-row4-pg8">
+        <div>
+          SHIPPING        
+        </div>
+        <div>
+          GROUND
+        </div>
+        <div>
+          $0
+        </div>
+      </div>
+
+      <div class="order-sum-row4-pg8">
+        <div>
+          .............
+        </div>
+        <div>
+          CHECKOIUT
+        </div>
+        <div>
+          .............
+        </div>
+      </div>    
+    </div>
+
+    <div class="footer-pg8">
+      <div id="button-checkout-pg8" class="add-to-cart-but-pg8"> 
+       Checkout 
+     </div>
+     <div class="price-but-pg8"> 
+      $40.00 
+    </div>
+  </div>
+  
+</div>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-1.9.1.js"></script>
+
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+
+
+  $(document).ready(function(){
+
+  
+
+
+// When Click Login Transition to Account page
+    $("#content-pg1-id").click(function(){
+       });
+
+
+    $("#top-right-menu-but").click(function(){
+      $(".main-navigation-menu-content").addClass("main-navigation-menu-open");
+    });
+
+    
+    $("#main-navigation-menu").click(function(){
+     $(".main-navigation-menu-content").removeClass("main-navigation-menu-open");
+   });
+
+
+    /*  Modal Pop-up Store information  */
+    $("#button-checkout-pg8").click(function(){
+     $(".checkout-popup").addClass("checkout-popup-overlay");
+   });
+
+
+    $("#checkout-popup-exit-id").click(function(){
+     $(".checkout-popup").removeClass("checkout-popup-overlay");
+   });
+
+
+/* Load Page Overlay */
+
+  setInterval(function() {
+    $(".load-page-overlay-fill").addClass("load-page-overlay-hide");
+    $(".double").css("display","none");
+    }, 4500);
+    
+// When Click Login Transition to Account page
+  $("#checkout-button1-id").click(function(){
+     $(".checkout-popup").removeClass("checkout-popup-overlay");
+        $(".load-page-overlay-fill").removeClass("load-page-overlay-hide");
+        $(".load-page-overlay-fill").addClass("load-page-overlay-show");
+
+    // Simulate Page Load:  Wait 5 Secons then load next page
+        setInterval(function() {
+          window.location = "ecom_pg1.html";
+        }, 2000);
+    });
+  
+
+
+$("#checkout-button1-id").click(function(){
+     $(".checkout-popup").removeClass("checkout-popup-overlay");
+      window.location = "ecom_pg1.html";    
+   });
+
+
+
+
+
+
+  });
+
+</script>
+
+
+</body>
+</html>

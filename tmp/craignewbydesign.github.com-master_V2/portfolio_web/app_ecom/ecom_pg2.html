@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <title>cnewbydesign - Ecommerce Mockup</title>
+
+  
+  <link href="css/styles_pg2.css" rel="stylesheet">
+  <link href="css/page_loader.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="main-navigation-menu" class="main-navigation-menu-content">
+    <div class="main-nav-sections">
+      <ul>
+        <li>
+          ::::::::::::::
+          Welcome 
+          ::::::::::::::
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="container">
+
+ 
+    <!-- page overlay and loader  -->
+
+    <div class="load-page-overlay-fill"> 
+      <div class="load-page-loader-hide" >
+  
+          <div id="loading-icon" class="double" style="margin-left: 100px; margin-top: 150px;">
+            <span class="loader loader3">
+              <span class="left"><span class="anim"></span></span>
+              <span class="right"><span class="anim"></span></span>
+            </span>
+          </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="header-pg2">
+      
+      <div class="nav-button-left">
+      </div>
+
+      <div id="top-right-menu-but" class="nav-button-right">   
+      </div>
+
+    </div>
+
+
+
+
+    <div class="content-pg2"> 
+      
+
+      <div class="search-bar-pg2"> 
+        
+        <div class="my-account-title-pg2" >
+          My Account
+        </div>
+
+        <form action="ecom_pg3.html">
+          <br />
+          <br />    
+          <input  type="text" id="searchBarLogin" name="searchBar" value="Login">
+          <br />
+          <br />
+          <input  type="text" id="searchBarPassword" name="searchBar" value="Password">
+          <br />
+          <br />
+          <div style="font-size: 12px;"> <a href="#">Forgot password? </a></div>
+          <br />
+          <br /> 
+          <input type="submit" id="loginButton"  name="loginButton" width="90px" value="Login" >
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="footer-pg2">
+    </div>
+    
+  </div> 
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="js/jquery-1.9.1.js"></script>
+
+
+
+  <script>
+
+
+
+    $(document).ready(function(){
+
+   
+    setInterval(function() {
+    $(".load-page-overlay-fill").addClass("load-page-overlay-hide");
+    $(".double").css("display","none");
+    }, 2500);
+    
+// When Click Login Transition to Account page
+    $("#loginButton").click(function(){
+           $(".load-page-overlay-empty").addClass("load-page-overlay-show");
+
+          window.location = "ecom_pg3.html";
+    });
+
+
+//Toggle between focus and blur for Login Field
+$("#searchBarLogin").focus(function(){  
+  $(this).attr("value"," "); 
+});
+
+$("#searchBarLogin").blur(function(){
+  $(this).attr("value","Login");
+});
+
+
+//Toggle between focus and blur for Password
+$("#searchBarPassword").focus(function(){  
+  $(this).attr("value"," "); 
+});
+
+$("#searchBarPassword").blur(function(){
+  $(this).attr("value","Password");
+});
+
+
+$("#top-right-menu-but").click(function(){
+  $(".main-navigation-menu-content").addClass("main-navigation-menu-open");
+});
+
+$("#main-navigation-menu").click(function(){
+ $(".main-navigation-menu-content").removeClass("main-navigation-menu-open");
+});
+
+
+});
+
+
+
+
+  </script>
+
+
+
+
+</body>
+</html>

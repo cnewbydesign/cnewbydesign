@@ -1,0 +1,396 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+body {
+	font-family: "Goudy Bookletter 1911", sans-serif;
+}
+
+
+.container {
+	
+}
+
+
+/* Load Page Overlay placeholder with Opacity = 0; */
+.load-page-overlay-empty {
+	position: absolute;
+	width: 500px; 
+	height: 500px;  
+	left: 0px;
+    z-index: 20;
+}
+
+/* Fill page with an overlay of color or an image */
+.load-page-overlay-fill {
+	position: absolute;
+	width: 500px; 
+	height: 500px;  
+	left: 0px;
+	background-color: #fffaaa; 
+    z-index: 20;
+
+}
+
+
+/* Show Page Overlay Animation*/
+/* fill page with an overlay to transition to next page loaded*/
+.load-page-overlay-show {
+	position: absolute;
+	width: 0px; 
+	height: 0px;  
+	left: 0px;
+	background-color: #fffaaa; 
+    z-index: 20;
+    animation: loadpageoverlayshow 1s;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+	-webkit-animation: loadpageoverlayshow 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: .5s;
+}
+
+@-webkit-keyframes loadpageoverlayshow {
+    0% {width: 0px; height: 0px; }
+	100% {width: 500px;	height: 500px; }
+}
+
+@keyframes loadpageoverlayshow {
+    0% {width: 0px; height: 0px; }
+	100% {width: 500px;	height: 500px; }
+}
+
+/* Hide Page Overlay Animation*/
+/* Remove overlay from page once it has loaded */
+.load-page-overlay-hide {
+	position: absolute;
+	width: 500px; 
+	height: 500px;  
+	left: 0px;
+	background-color: #fffaaa; 
+    z-index: 20;
+    animation: loadpageoverlayhide .5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+	-webkit-animation: loadpageoverlayhide .5s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 0s;
+}
+
+@-webkit-keyframes loadpageoverlayhide {
+    0% {width: 500px; height: 500px; }
+	100% {width: 0px;	height: 0px; }
+}
+
+
+@keyframes loadpageoverlayhide {
+    0% {width: 500px; height: 500px; }
+	100% {width: 0px;	height: 0px; }
+}
+
+
+
+/* Hide/Show */
+/* loading page animation */
+
+.load-page-loader-hide {
+	position: absolute;
+}
+
+.load-page-loader-show {
+	position: absolute;
+	width: 20px; 
+	height: 20px;  
+	left: 100px;
+	top: 200px;
+	height: 100px;
+	opacity: 0;
+	background-color: #000aac; 
+    animation: loadpageloader .5s;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
+	-webkit-animation: loadpageloader .5s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: .2s;
+}
+
+@-webkit-keyframes loadpageloader {
+    0% {opacity: 0;}
+	100% {opacity: 1; }
+}
+
+
+@keyframes loadpageloader {
+    0% {opacity: 0;}
+	100% {opacity: 1; }
+}
+
+
+
+.header-pg4 {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(218, 226, 244, 1);
+	z-index: 5;
+}
+
+
+/*  NAVIGATION MENUS  */
+
+.product-back-button {
+	position: absolute;
+	top: 5px;
+	left: 20px;
+	width: 50px;	
+	height: 30px;
+	background-color: #ffffff;
+	border: 5px solid rgba(204, 204, 250, 1);
+	border-right: 15px solid rgba(204, 204, 250, 1);
+	border-radius: 10px;
+}
+
+.nav-button-right {
+	position: absolute;
+	top: 20px;
+	right: 5px;
+	width: 50px;	
+	height: 10px;
+	background-color: #ffffff;
+	border-radius: 10px;
+
+}
+
+
+.main-navigation-menu-content{
+	position: absolute;
+	visibility: hidden;
+	width: 0px;
+	height: 100%;
+	left: 0px;
+	background-color: rgba(0,0, 255, 0.7);
+	z-index: 50;
+	
+	transition: all .1s ease-in-out;
+}
+
+.main-navigation-menu-open{
+	position: absolute;
+	visibility: visible;
+	width: 90%;
+	height: 100%;
+	left: 0px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 0px 50px 50px 0px;
+	box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, .5);
+	z-index: 50;
+
+}
+
+.main-nav-sections {
+	position: absolute;
+	top: 150px;
+	left: 40px;
+	font-size: 25px;
+	font-weight: bold;
+	width: auto;
+	height: 200px;
+	margin: auto;
+}
+
+.main-nav-sections ul {
+	list-style-type: none;
+	text-align: center;
+}
+
+
+
+/****  Modal Popup - Women's and Children's Construction Pages ***/
+
+.construction-womens-popup, .construction-childrens-popup{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	opacity: 0;
+	transition: all .3s ease-in-out;
+}
+
+.construction-womens-popup-overlay, .construction-childrens-popup-overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	display: block;
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 100;
+}
+
+.construction-womens-popup-info {
+	position: absolute;
+	top: 100px;
+	left: 50px;
+	margin-left: 50%;
+	margin: auto;
+	width: 200px;
+	height: 200px;
+	color: rgba(183, 200, 235, 1);
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 1);
+	border: 5px solid rgba(252, 229, 205, 1);
+	box-shadow: 4px 4px 0px 0px rgba(249, 203, 156, 0.9);
+	z-index: 100;
+}
+
+
+.construction-childrens-popup-info {
+	position: absolute;
+	top: 100px;
+	left: 50px;
+	margin-left: 50%;
+	margin: auto;
+	width: 200px;
+	height: 200px;
+	color: rgba(183, 200, 235, 1);
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 1);
+	border: 5px solid rgba(164, 194, 244, 1);
+	box-shadow: 4px 4px 0px 0px rgba(109, 158, 235, 0.9);
+	z-index: 100;
+}
+
+.construction-womens-popup-exit {
+	position: absolute;
+	top: 200px;
+	bottom: 200px;
+	left: -5px;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(252, 229, 205, 1);
+}
+
+.construction-childrens-popup-exit {
+	position: absolute;
+	top: 200px;
+	bottom: 200px;
+	left: -5px;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(164, 194, 244, 1);
+}
+
+
+.exit-x {
+	position: absolute;
+	top: 25px;
+	left: 5px;
+	width: 40px;
+	height: 40px;
+	z-index: 10;
+}
+
+.exit-x1 {
+	
+    position: absolute;
+    background-color: #ffffff;
+    width: 40px;
+    height: 5px;
+    -webkit-transform: translateY(250%);
+	transform: translateY(250%);
+	-webkit-transform: translateY(0) rotate(45deg);
+	transform: translateY(0) rotate(45deg);
+}
+
+.exit-x2 {
+	
+    position: absolute;
+    background-color: #ffffff;
+    width: 40px;
+    height: 5px;
+    -webkit-transform: translateY(250%);
+	transform: translateY(250%);
+	-webkit-transform: translateY(0) rotate(-45deg);
+	transform: translateY(0) rotate(-45deg);
+}
+
+
+
+/****  Main Page Content ***/
+
+.content-pg4 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #cCCCFA;
+}
+
+
+.mens-sect-pg4 {
+	position: relative;
+	top: 90px;
+	right: 0px;
+	width: 200px;
+	height: 70px;
+	margin: auto;
+	font-size: 30px;
+	text-align: center;
+	line-height: 70px;
+	color: #cccccc;
+	background-color: #ccFFFF;
+	border: 5px solid #ccffff;
+	border-radius: 50px 0px 50px 0px;
+	box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.5) inset;
+	transform: rotate(-10deg);
+}	
+
+
+.womens-sect-pg4 {
+	position: relative;
+	top: 110px;
+	left: 0px;
+	width: 250px;
+	height: 70px;
+	margin: auto;
+	font-size: 30px;
+	text-align: center;
+	line-height: 70px;
+	color: #cccccc;
+	background-color: #cc33FF;
+	border: 5px solid #cc33ff;
+	border-radius: 50px 0px 50px 0px;
+	box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.5) inset;
+	transform: rotate(-10deg);
+
+}	
+
+.childrens-sect-pg4 {
+	position: relative;
+	top: 130px;
+	right: 0px;
+	width: 250px;
+	height: 70px;
+	margin: auto;
+	font-size: 30px;
+	text-align: center;
+	line-height: 70px;
+	color: #cccccc;
+	background-color: #caa33F;
+	border: 5px solid #caa33f;
+	border-radius: 50px 0px 50px 0px;
+	box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.5) inset;
+	transform: rotate(-10deg);
+
+}	

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <style type="text/css">
+            body {
+                background-color: rgba(204, 204, 255, .5);
+            }
+            /* wrapper/container for items used in css effect */
+            .wrapper {
+                position: relative;
+                width: 100px;
+                height: 150px;
+                margin: 65px auto 0px auto;
+            }
+            /* Back layer image  */
+            .image-flip1 {
+                position: absolute;
+                width: 100px;
+                height: 150px;
+                background-color: #fcc3af;
+                border: 10px solid rgba(255, 255, 255, 0);
+                opacity: 1;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+                background-image: url('http://eswalls.com/wp-content/uploads/2013/12/abstract-wallpaper-hd-4.jpg');
+                background-position: 900px 200px;
+                /* Initial scale set to 0.1 */
+                /* Hover  */
+                transform: scale(0.1);
+                transition: all .6s, border 1s, box-shadow 1.5s ease-in-out;
+                -webkit-transform: scale(0.1);
+                -webkit-transition: all .6s, border 1s, box-shadow 1.5s ease-in-out;
+            }
+            /* Front layer image  */
+            .image-flip2 {
+                position: absolute;
+                width: 100px;
+                height: 150px;
+                background-color: #ccaacf;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .3);
+                opacity: 1;
+                transform: scale(1);
+                transition: all .5s, box-shadow .1s ease-in-out;
+                -webkit-transform: scale(1);
+                -webkit-transition: all .5s, box-shadow .1s ease-in-out;
+            }
+            /* Wrapper is set as hotspot for mouse*/
+            /* Hover scales image-flip1 to 1 and fade in Opacity to 1  */
+            .wrapper:hover .image-flip1 {
+                border: 10px solid rgba(255, 255, 255, .7);
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .3);
+                background-color: #fcc3af;
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            /* Wrapper is set as hotspot for mouse*/
+            /* Hover scales image-flip2 to 1.5 and fade out Opacity to 0  */
+            .wrapper:hover .image-flip2 {
+                background-color: #333ccc;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+                opacity: 0;
+                -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="wrapper">
+            <div>
+                <div class="image-flip1"></div>
+                <div class="image-flip2"></div>
+            </div>
+        </div>
+    </body>
+
+</html>
